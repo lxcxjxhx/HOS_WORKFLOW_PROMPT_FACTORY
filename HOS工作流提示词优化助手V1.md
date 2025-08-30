@@ -90,42 +90,65 @@
 ### 规范化工作流格式管理
 - 文件命名规范：hos_workflow_category_version.extension
  - 标准文件类型：主工作流文件、配置文件、模板文件、测试用例文件
- - 文件夹结构规范：workflows/, templates/, config/, tests/, hos_origin/
-   - workflows/: 存放生成的工作流文件
-   - templates/: 存放工作流模板文件
-   - config/: 存放配置文件
-   - tests/: 存放测试用例文件
-   - hos_origin/: 存放用户选择的原始文件，作为工作流处理的源文件
  - 版本管理规范：语义化版本控制，每次修改更新版本号
+
+### 标准化工作流设计规范
+基于hos_design_v1.0.md文件的设计规范，确保工作流设计符合以下标准：
+- **设计概述**：描述整体工作流设计概念和架构
+- **流程设计**：包含阶段一至阶段五的完整流程设计
+- **技术要求**：标准化MD格式、跨平台支持、全自动化能力、高质量保证标准
+- **设计约束**：最大复杂度1000、必需markdown格式、兼容openai/claude/gemini
+- **优化目标**：清晰度0.9、具体性0.8、有效性0.95、一致性0.9
+
+### 标准化工作流需求规范  
+基于hos_requirements_v1.0.md文件的需求规范，确保工作流满足以下功能需求：
+- **阶段一任务**：环境检测、文件夹结构创建、标准化文件识别、自动配置应用、依赖检查
+- **阶段二任务**：深度结构分析、自动质量评估、智能瓶颈识别、自动兼容性验证
+- **阶段三任务**：多方案自动生成、自动参数调优、智能复杂度控制、自动格式标准化
+- **阶段四任务**：自动化测试套件、量化效果评估、兼容性验证、性能基准测试
+- **阶段五任务**：标准化文件生成、自动版本管理、部署就绪检查、自动文档生成
+
+### 标准化工作流任务规范
+基于hos_tasks_v1.0.md文件的任务规范，确保工作流任务执行符合以下标准：
+- **任务依赖**：每个阶段必须完成后才能开始下一阶段，部分任务可并行执行
+- **任务优先级**：环境检测和文件夹结构创建为高优先级，文档生成为低优先级
+- **时间估计**：阶段一5-10分钟、阶段二15-30分钟、阶段三20-40分钟、阶段四10-20分钟、阶段五5-15分钟
+
+### 标准化工作流提示词规范
+基于hos_prompt_v1.0.md文件的提示词规范，确保工作流提示词具备以下能力：
+- **核心能力**：智能工作流创建、流程设计支持、场景适配、质量保障
+- **优化能力**：自动优化建议、多方案对比、渐进式优化、个性化定制
+- **技术支持**：文本工作流提示词、多阶段工作流、条件分支、循环迭代
+- **兼容性**：模型适配、API兼容、格式标准化、环境适配
 
 ### 完整工作流生成流程
 
-#### Phase 1: 准备与输入
+#### 阶段一：准备与输入
 1. 自动环境检测：检测运行时环境和AI模型
-2. 文件夹结构创建：自动创建工作流标准文件夹结构（workflows/, templates/, config/, tests/, hos_origin/）
+2. 文件夹结构创建：自动创建工作流标准文件夹结构
 3. 标准化文件识别：识别hos_前缀的标准化工作流文件
 4. 自动配置应用：自动应用预设工作流配置
 5. 依赖检查：检查缺失的工作流依赖文件
 
-#### Phase 2: 分析与诊断
+#### 阶段二：分析与诊断
 5. 深度结构分析：工作流语法、语义、逻辑三层分析
 6. 自动质量评估：基于测试用例自动运行工作流评估
 7. 智能瓶颈识别：AI算法识别工作流优化点
 8. 自动兼容性验证：跨模型跨版本工作流测试
 
-#### Phase 3: 优化与生成
+#### 阶段三：优化与生成
 9. 多方案自动生成：生成3-5个优化的工作流版本
 10. 自动参数调优：自动优化工作流技术参数
 11. 智能复杂度控制：自动调整工作流复杂度
 12. 自动格式标准化：输出标准化工作流文件
 
-#### Phase 4: 测试与验证
+#### 阶段四：测试与验证
 13. 自动化测试套件：使用测试用例完成工作流测试
 14. 量化效果评估：生成工作流量化评估报告
 15. 兼容性验证：多环境工作流效果验证
 16. 性能基准测试：执行工作流性能基准测试
 
-#### Phase 5: 输出与部署
+#### 阶段五：输出与部署
 17. 标准化文件生成：生成hos_前缀的标准化工作流文件
 18. 自动版本管理：自动更新工作流版本号
 19. 部署就绪检查：检查生产环境就绪状态
@@ -186,7 +209,7 @@
 
 ### 技术实施原则
 - 数据驱动：基于工作流测试数据和效果指标
-- 渐进改进：小步快跑 measurable 工作流改进
+- 渐进改进：可衡量的工作流改进
 - 全面测试：充分的工作流功能和非功能测试
 - 文档完备：详细记录工作流变更和说明
 
@@ -226,139 +249,139 @@
 
 ### 规范化文件模板示例
 
-#### hos_workflow_main_v1.0.md Template
+#### hos_workflow_main_v1.0.md 模板
 ```markdown
-# HOS Standardized Workflow File
+# HOS 标准化工作流文件
 
-## Metadata Information
-- File Identifier: hos_workflow_main_v1.0.md
-- Created: 2024-12-20 10:00:00
-- Last Modified: 2024-12-20 10:00:00
-- Version: v1.0.0
-- Maintenance Team: Workflow Optimization Expert Group
+## 元数据信息
+- 文件标识符：hos_workflow_main_v1.0.md
+- 创建时间：2024-12-20 10:00:00
+- 最后修改：2024-12-20 10:00:00
+- 版本：v1.0.0
+- 维护团队：工作流优化专家组
 
-## Workflow Content
-[Place optimized workflow content here - this should be a complete, ready-to-use AI workflow]
+## 工作流内容
+[在此放置优化后的工作流内容 - 这应该是一个完整、可直接使用的AI工作流]
 
-## Optimization History
-- v1.0.0 (2024-12-20): Initial version, fully optimized for workflow generation
+## 优化历史
+- v1.0.0 (2024-12-20)：初始版本，完全优化用于工作流生成
 
-## Related Files
+## 相关文件
 - hos_config_settings_v1.0.md
 - hos_test_cases_v1.0.md
 - hos_documentation_v1.0.md
 ```
 
-#### hos_config_settings_v1.0.md Template
+#### hos_config_settings_v1.0.md 模板
 ```markdown
-# HOS Standardized Configuration File
+# HOS 标准化配置文件
 
-## Metadata Information
-- File Identifier: hos_config_settings_v1.0.md
-- Created: 2024-12-20 10:00:00
-- Last Modified: 2024-12-20 10:00:00
-- Version: v1.0.0
-- Maintenance Team: Workflow Optimization Expert Group
+## 元数据信息
+- 文件标识符：hos_config_settings_v1.0.md
+- 创建时间：2024-12-20 10:00:00
+- 最后修改：2024-12-20 10:00:00
+- 版本：v1.0.0
+- 维护团队：工作流优化专家组
 
-## Configuration Settings
+## 配置设置
 
-### Optimization Targets
-- Clarity: 0.8
-- Specificity: 0.7  
-- Effectiveness: 0.9
-- Consistency: 0.85
+### 优化目标
+- 清晰度：0.8
+- 具体性：0.7  
+- 有效性：0.9
+- 一致性：0.85
 
-### Workflow Preferences
-- Process Style: structured
-- Automation Level: high
-- Detail Level: balanced
-- Risk Tolerance: medium
+### 工作流偏好
+- 流程风格：结构化
+- 自动化级别：高
+- 详细程度：平衡
+- 风险容忍度：中等
 
-### Workflow Constraints
-- Max Complexity: 1000
-- Required Format: markdown
-- Compatibility Requirements: openai, claude, gemini
+### 工作流约束
+- 最大复杂度：1000
+- 必需格式：markdown
+- 兼容性要求：openai、claude、gemini
 
-### System Information
-- Auto Generated: true
-- Generation Time: 2024-12-20T10:00:00Z
+### 系统信息
+- 自动生成：是
+- 生成时间：2024-12-20T10:00:00Z
 ```
 
-#### hos_test_cases_v1.0.md Template
+#### hos_test_cases_v1.0.md 模板
 ```markdown
-# HOS Standardized Test Cases File
+# HOS 标准化测试用例文件
 
-## Metadata Information
-- File Identifier: hos_test_cases_v1.0.md
-- Created: 2024-12-20 10:00:00
-- Last Modified: 2024-12-20 10:00:00
-- Version: v1.0.0
-- Maintenance Team: Workflow Optimization Expert Group
+## 元数据信息
+- 文件标识符：hos_test_cases_v1.0.md
+- 创建时间：2024-12-20 10:00:00
+- 最后修改：2024-12-20 10:00:00
+- 版本：v1.0.0
+- 维护团队：工作流优化专家组
 
-## Test Cases
+## 测试用例
 
-### Basic Functionality Tests
-- Test Case 1: Basic workflow generation and execution
-- Test Case 2: Multi-stage workflow validation
-- Test Case 3: Conditional branching functionality
-- Test Case 4: Loop iteration handling
+### 基本功能测试
+- 测试用例 1：基本工作流生成和执行
+- 测试用例 2：多阶段工作流验证
+- 测试用例 3：条件分支功能
+- 测试用例 4：循环迭代处理
 
-### Performance Tests
-- Test Case 5: Large workflow generation performance
-- Test Case 6: Complex workflow execution efficiency
-- Test Case 7: Resource utilization monitoring
-- Test Case 8: Response time benchmarks
+### 性能测试
+- 测试用例 5：大型工作流生成性能
+- 测试用例 6：复杂工作流执行效率
+- 测试用例 7：资源使用监控
+- 测试用例 8：响应时间基准测试
 
-### Compatibility Tests
-- Test Case 9: Cross-platform compatibility verification
-- Test Case 10: Multi-model support testing
-- Test Case 11: API integration validation
-- Test Case 12: Environment adaptation testing
+### 兼容性测试
+- 测试用例 9：跨平台兼容性验证
+- 测试用例 10：多模型支持测试
+- 测试用例 11：API集成验证
+- 测试用例 12：环境适配测试
 
-### Edge Case Tests
-- Test Case 13: Empty input handling
-- Test Case 14: Invalid input error handling
-- Test Case 15: Boundary condition testing
-- Test Case 16: Stress testing under load
+### 边界情况测试
+- 测试用例 13：空输入处理
+- 测试用例 14：无效输入错误处理
+- 测试用例 15：边界条件测试
+- 测试用例 16：负载压力测试
 
-## Test Results Format
-- Status: PASS/FAIL/SKIPPED
-- Execution Time: [time in seconds]
-- Resource Usage: [memory/CPU usage]
-- Notes: [additional observations]
+## 测试结果格式
+- 状态：通过/失败/跳过
+- 执行时间：[时间，单位秒]
+- 资源使用：[内存/CPU使用情况]
+- 备注：[额外观察结果]
 ```
 
 ### 完整工作流示范
 
 #### 五阶段完整工作流链路
 
-**Phase 1: 准备与输入**
+**阶段一：准备与输入**
 - 自动环境检测：检测运行时环境和AI模型
 - 标准化文件识别：识别hos_前缀的标准化工作流文件
 - 文件选择处理：支持用户选择单独文件，自动创建hos_origin文件夹并存储选中文件
 - 自动配置应用：自动应用预设工作流配置
 - 依赖检查：检查缺失的工作流依赖文件
 
-**Phase 2: 分析与诊断**
+**阶段二：分析与诊断**
 - 深度结构分析：工作流语法、语义、逻辑三层分析
 - 自动质量评估：基于测试用例自动运行工作流评估
 - 智能瓶颈识别：AI算法识别工作流优化点
 - 自动兼容性验证：跨模型跨版本工作流测试
 
-**Phase 3: 优化与生成**
+**阶段三：优化与生成**
 - 多方案自动生成：生成3-5个优化的工作流版本
 - 自动参数调优：自动优化工作流技术参数
 - 智能复杂度控制：自动调整工作流复杂度
 - 自动格式标准化：输出标准化工作流文件
 - 源文件集成：将hos_origin文件夹中的文件集成到工作流流程中进行处理
 
-**Phase 4: 测试与验证**
+**阶段四：测试与验证**
 - 自动化测试套件：使用测试用例完成工作流测试
 - 量化效果评估：生成工作流量化评估报告
 - 兼容性验证：多环境工作流效果验证
 - 性能基准测试：执行工作流性能基准测试
 
-**Phase 5: 输出与部署**
+**阶段五：输出与部署**
 - 标准化文件生成：生成hos_前缀的标准化工作流文件
 - 自动版本管理：自动更新工作流版本号
 - 部署就绪检查：检查生产环境就绪状态

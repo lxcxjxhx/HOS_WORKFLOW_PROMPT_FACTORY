@@ -31,17 +31,7 @@ HOS（Hybrid Optimization System）标准化工作流提示词生成助手是一
 
 ## 快速开始
 
-### 安装与配置
-```bash
-# 克隆项目
-git clone <repository-url>
 
-# 安装依赖
-pip install -r requirements.txt
-
-# 运行系统
-python hos_main.py
-```
 
 ### 基本使用
 1. **环境检测**：系统自动检测运行时环境和AI模型兼容性
